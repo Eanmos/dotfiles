@@ -242,12 +242,19 @@
 		</action>
 	</keybind>
 
-	<keybind key="W-C">
+	<keybind key="W-F">
 		<action name="MoveResizeTo">
 			<x>center</x>
 			<y>center</y>
 			<width>90%</width>
 			<height>90%</height>
+		</action>
+	</keybind>
+
+	<keybind key="W-C">
+		<action name="MoveResizeTo">
+			<x>center</x>
+			<y>center</y>
 		</action>
 	</keybind>
 </keyboard>
