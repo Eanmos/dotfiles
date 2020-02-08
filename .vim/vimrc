@@ -47,7 +47,9 @@ syntax on
 colorscheme centurion
 
 " Use GUI colors in the terminal.
-set termguicolors
+if has('termguicolors')
+	set termguicolors
+endif
 
 " Make the backspace work like in most other programs.
 set backspace=indent,eol,start
@@ -55,6 +57,9 @@ set backspace=indent,eol,start
 " Automatically copy to the system clipboard (CLIPBOARD).
 " See <https://vi.stackexchange.com/a/96>.
 set clipboard=unnamedplus
+
+" Possibility to have more than one unsaved buffers.
+set hidden
 
 "==============================================================================
 "
