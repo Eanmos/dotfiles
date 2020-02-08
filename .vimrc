@@ -52,6 +52,10 @@ set termguicolors
 " Make the backspace work like in most other programs.
 set backspace=indent,eol,start
 
+" Automatically copy to the system clipboard (CLIPBOARD).
+" See <https://vi.stackexchange.com/a/96>.
+set clipboard=unnamedplus
+
 "==============================================================================
 "
 " APPEARANCE
