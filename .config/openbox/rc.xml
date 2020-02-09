@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<openbox_config xmlns="http://openbox.org/3.4/rc"
-		xmlns:xi="http://www.w3.org/2001/XInclude">
+<openbox_config xmlns="http://openbox.org/3.4/rc" xmlns:xi="http://www.w3.org/2001/XInclude">
 
 <resistance>
 	<strength>10</strength>
@@ -118,48 +117,86 @@
 <keyboard>
 	<chainQuitKey>C-g</chainQuitKey>
 
+	<!-- Keybindings for screen capturing. -->
+
+	<keybind key="Print">
+		<action name="Execute">
+			<command>scrot '/tmp/%F_%T_$wx$h.png' -e 'xclip -selection clipboard -target image/png -i $f'</command>
+		</action>
+	</keybind>
+
 	<!-- Keybindings for desktop switching. -->
 
 	<keybind key="C-A-Left">
-		<action name="GoToDesktop"><to>left</to><wrap>no</wrap></action>
+		<action name="GoToDesktop">
+			<to>left</to>
+			<wrap>no</wrap>
+		</action>
 	</keybind>
+
 	<keybind key="C-A-Right">
-		<action name="GoToDesktop"><to>right</to><wrap>no</wrap></action>
+		<action name="GoToDesktop">
+			<to>right</to>
+			<wrap>no</wrap>
+		</action>
 	</keybind>
 
 	<keybind key="C-W-Left">
-		<action name="SendToDesktop"><to>left</to><wrap>no</wrap></action>
+		<action name="SendToDesktop">
+			<to>left</to>
+			<wrap>no</wrap>
+		</action>
 	</keybind>
+
 	<keybind key="C-W-Right">
-		<action name="SendToDesktop"><to>right</to><wrap>no</wrap></action>
+		<action name="SendToDesktop">
+			<to>right</to>
+			<wrap>no</wrap>
+		</action>
 	</keybind>
 
-	<keybind key="W-F1">
-		<action name="GoToDesktop"><to>1</to></action>
-	</keybind>
-	<keybind key="W-F2">
-		<action name="GoToDesktop"><to>2</to></action>
-	</keybind>
-	<keybind key="W-F3">
-		<action name="GoToDesktop"><to>3</to></action>
-	</keybind>
-	<keybind key="W-F4">
-		<action name="GoToDesktop"><to>4</to></action>
-	</keybind>
-
-	<!-- Keybindings for windows -->
+	<!-- Keybindings for windows manipulating. -->
 
 	<keybind key="A-F4">
 		<action name="Close"/>
 	</keybind>
 
-	<!-- Keybindings for window switching. -->
+	<keybind key="W-Left">
+		<action name="MoveResizeTo">
+			<x>+-0</x>
+			<width>50%</width>
+			<height>100%</height>
+		</action>
+	</keybind>
+
+	<keybind key="W-Right">
+		<action name="MoveResizeTo">
+			<x>-0</x>
+			<width>50%</width>
+			<height>100%</height>
+		</action>
+	</keybind>
+
+	<keybind key="W-F">
+		<action name="MoveResizeTo">
+			<x>center</x>
+			<y>center</y>
+			<width>90%</width>
+			<height>90%</height>
+		</action>
+	</keybind>
+
+	<keybind key="W-C">
+		<action name="MoveResizeTo">
+			<x>center</x>
+			<y>center</y>
+		</action>
+	</keybind>
 
 	<keybind key="A-Tab">
 		<action name="NextWindow">
 			<bar>no</bar>
 			<dialog>none</dialog>
-
 			<finalactions>
 				<action name="Focus"/>
 				<action name="Raise"/>
@@ -223,38 +260,6 @@
 	<keybind key="W-b">
 		<action name="Execute">
 			<command>chromium</command>
-		</action>
-	</keybind>
-
-	<keybind key="W-Left">
-		<action name="MoveResizeTo">
-			<x>+-0</x>
-			<width>50%</width>
-			<height>100%</height>
-		</action>
-	</keybind>
-
-	<keybind key="W-Right">
-		<action name="MoveResizeTo">
-			<x>-0</x>
-			<width>50%</width>
-			<height>100%</height>
-		</action>
-	</keybind>
-
-	<keybind key="W-F">
-		<action name="MoveResizeTo">
-			<x>center</x>
-			<y>center</y>
-			<width>90%</width>
-			<height>90%</height>
-		</action>
-	</keybind>
-
-	<keybind key="W-C">
-		<action name="MoveResizeTo">
-			<x>center</x>
-			<y>center</y>
 		</action>
 	</keybind>
 </keyboard>
