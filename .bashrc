@@ -18,4 +18,4 @@ export VISUAL=vim
 export EDITOR="$VISUAL"
 
 # Set shell prompt to blue-colored '$ '.
-PS1=$'\e[1;34m$\e[m '
+PS1=$'\e[1;34m❯\e[m '
