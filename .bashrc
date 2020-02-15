@@ -2,7 +2,7 @@
 # ~/.bashrc
 #
 
-# Enable fuzzy competion for BASH.
+# Enable fuzzy completion for BASH.
 source /usr/share/fzf/completion.bash
 
 # Some useful aliases.
@@ -15,7 +15,9 @@ alias fzf='fzf -m --no-mouse'
 
 # Make Vim the default editor.
 export VISUAL=vim
-export EDITOR="$VISUAL"
+export EDITOR='$VISUAL'
 
-# Set shell prompt to blue-colored '$ '.
-PS1=$'\e[1;34m❯\e[m '
+# Set shell prompt.
+YELLOW="\[$(tput setaf 3)\]"
+RESET="\[$(tput sgr0)\]"
+export PS1="${YELLOW}❯${RESET} "
