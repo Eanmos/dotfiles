@@ -1,5 +1,0 @@
-setxkbmap -model pc105 -layout us,ru -variant , -option grp:caps_toggle misc:typo lv3:ralt_switch &
-compton &
-hsetroot -fill ~/.wallpaper.jpg -blur 3 &
-xset r rate 190 35 &
-yandex-disk start &
