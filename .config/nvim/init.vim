@@ -1,3 +1,5 @@
+execute pathogen#infect()
+
 " Set number lines.
 set number
 
@@ -7,7 +9,7 @@ set showcmd
 
 " Make cursor line visible, but highlight only current line number.
 set cursorline
-set cursorlineopt=number
+hi clear CursorLine
 
 " Make sign column always visible.
 set signcolumn=yes

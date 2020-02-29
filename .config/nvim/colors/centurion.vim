@@ -31,7 +31,7 @@ hi PreCondit guifg=#e1ae69 guibg=NONE
 hi Debug guifg=#e1ae69 guibg=NONE
 hi SpecialChar guifg=#6CA6CE guibg=NONE
 hi Conditional guifg=#C55B4E guibg=NONE
-hi Todo guifg=#e1ae69 guibg=NONE
+hi Todo gui=bold guifg=#666666 guibg=NONE
 hi Special guifg=#e1ae69 guibg=NONE
 hi Label guifg=#C55B4E guibg=NONE
 hi Delimiter guifg=#e1ae69 guibg=NONE
@@ -69,12 +69,18 @@ hi SpecialComment guifg=#666666 gui=italic guibg=#2a2a2a
 hi CursorLine cterm=bold
 hi TabLineFill gui=NONE guibg=#454545
 hi TabLine guifg=#666666 guibg=#454545 gui=NONE
-hi StatusLine gui=bold guibg=#454545 guifg=#cccccc
+hi StatusLine gui=NONE guibg=#454545 guifg=#cccccc
 hi StatusLineNC gui=NONE guibg=#2a2a2a guifg=#cccccc
-hi Search guibg=#666666 guifg=#cccccc
-hi VertSplit gui=NONE guifg=#454545 guibg=NONE
+hi Search gui=NONE guibg=#E1AE69 guifg=#202020
+hi VertSplit guifg=#454545 guibg=#454545
 hi Visual gui=NONE guibg=#454545
-
+hi SpellBad guifg=#C55B4E guibg=NONE cterm=bold term=bold
+hi SpellRare guifg=#C55B4E guibg=NONE cterm=bold term=bold
+hi SpellCap guifg=#C55B4E guibg=NONE cterm=bold term=bold
+hi SpellLocal guifg=#C55B4E guibg=NONE cterm=bold term=bold
 hi SpecialKey guifg=#666666
 hi StandardFunction guifg=#C55B4E guibg=NONE
 hi EndOfBuffer guifg=#2A2A2A
+hi CursorLine guibg=NONE
+
+hi GAS_Opcode guifg=#E1AE69
