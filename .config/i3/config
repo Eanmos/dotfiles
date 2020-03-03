@@ -8,13 +8,14 @@ for_window [class="^.*"] border pixel 0
 gaps inner 16
 gaps outer 32
 
-exec --no-startup-id sh -c "hsetroot -fill ~/.wallpaper.jpg -blur 3"
+exec --no-startup-id sh -c "hsetroot -solid '#111111'"
 exec --no-startup-id sh -c "compton"
 exec --no-startup-id sh -c "setxkbmap -model pc105 -layout us,ru -variant , -option grp:caps_toggle misc:typo lv3:ralt_switch"
 exec --no-startup-id sh -c "xset r rate 190 35"
 exec --no-startup-id sh -c "yandex-disk start"
 
-font pango:DejaVu Sans Mono 8
+font pango:JetBrains Mono Italic 8
+title_align center
 
 exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
 exec --no-startup-id nm-applet
@@ -97,6 +98,11 @@ bindsym $mod+Shift+0 move container to workspace number $ws10
 bindsym $mod+Shift+c reload
 bindsym $mod+Shift+r restart
 bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -B 'Yes, exit i3' 'i3-msg exit'"
+
+# class                 border  bground text    indicator child_border
+client.focused          #454545 #454545 #FFFFFF #2E9EF4   #285577
+client.focused_inactive #202020 #202020 #CCCCCC #484E50   #5F676A
+client.unfocused        #202020 #202020 #CCCCCC #292D2E   #222222
 
 mode "resize" {
         # Pressing left will shrink the window’s width.
