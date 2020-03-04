@@ -20,8 +20,8 @@ function clamp()
 
 readonly BRIGHTNESS_STEP=5
 
-readonly brightness=$(< /sys/class/backlight/amdgpu_bl1/brightness)
-readonly maxBrightness=$(< /sys/class/backlight/amdgpu_bl1/max_brightness)
+readonly brightness=$(< /sys/class/backlight/amdgpu_bl0/brightness)
+readonly maxBrightness=$(< /sys/class/backlight/amdgpu_bl0/max_brightness)
 
 readonly action=$1
 
@@ -39,5 +39,21 @@ fi
 
 newBrightness=$(clamp $newBrightness 0 $maxBrightness)
 
-echo $newBrightness > /sys/class/backlight/amdgpu_bl1/brightness
+echo $newBrightness > /sys/class/backlight/amdgpu_bl0/brightness
 
+#
+# Notification:
+#
+
+# Arbitrary but unique message id.
+readonly MSG_ID="211047"
+
+# Timeout 1 sec.
+readonly TIMEOUT=1000
+
+# Calculate brightness in percents.
+brightnessPercents=$(echo \
+	$(printf %3.0f $(echo \
+		"scale=2; $newBrightness / 255 * 100" | bc)))
+
+dunstify -u low -r "$MSG_ID" "Brightness: $brightnessPercents%" -t $TIMEOUT
