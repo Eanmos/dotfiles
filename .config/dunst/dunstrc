@@ -1,0 +1,20 @@
+[global]
+	geometry = "x5-0+0"
+	padding = 1
+	horizontal_padding = 10
+	font = JetBrains Mono 8
+
+[urgency_low]
+    background = "#202020"
+    foreground = "#cccccc"
+    timeout = 5
+
+[urgency_normal]
+    background = "#202020"
+    foreground = "#E1AE69"
+    timeout = 10
+
+[urgency_critical]
+    background = "#202020"
+    foreground = "#C55B4E"
+    timeout = 0
