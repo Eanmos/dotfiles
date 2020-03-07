@@ -18,7 +18,7 @@ tabspaces: 4
 
 font:
   normal:
-    family: JetBrains Mono
+    family: JetBrains Mono Nerd Font
     style: Regular
 
   size: 7.0
@@ -34,32 +34,67 @@ font:
 
 draw_bold_text_with_bright_colors: true
 
-colors:
-  primary:
-    background: '0x2a2a2a'
-    foreground: '0xCCCCCC'
+schemes:
+    # Colors (Base16 Default Dark)
+    base16: &base16
+      # Default colors
+      primary:
+        background: '#181818'
+        foreground: '#d8d8d8'
 
-  normal:
-    black:   '0x2a2a2a'
-    red:     '0xC55B4E'
-    green:   '0x86C797'
-    yellow:  '0xE1AE69'
-    blue:    '0x6CA6CE'
-    magenta: '0xb16286'
-    cyan:    '0x689d6a'
-    white:   '0xcccccc'
+      # Colors the cursor will use if `custom_cursor_colors` is true
+      cursor:
+        text: '#d8d8d8'
+        cursor: '#d8d8d8'
 
-  bright:
-    black:   '0x2a2a2a'
-    red:     '0xC55B4E'
-    green:   '0x86C797'
-    yellow:  '0xE1AE69'
-    blue:    '0x6CA6CE'
-    magenta: '0xb16286'
-    cyan:    '0x689d6a'
-    white:   '0xcccccc'
+      # Normal colors
+      normal:
+        black:   '#181818'
+        red:     '#ab4642'
+        green:   '#a1b56c'
+        yellow:  '#f7ca88'
+        blue:    '#7cafc2'
+        magenta: '#ba8baf'
+        cyan:    '#86c1b9'
+        white:   '#d8d8d8'
 
-  indexed_colors: []
+      # Bright colors
+      bright:
+        black:   '#585858'
+        red:     '#ab4642'
+        green:   '#a1b56c'
+        yellow:  '#f7ca88'
+        blue:    '#7cafc2'
+        magenta: '#ba8baf'
+        cyan:    '#86c1b9'
+        white:   '#f8f8f8'
+
+    galea: &galea_dark
+      primary:
+        background: '0x2a2a2a'
+        foreground: '0xCCCCCC'
+
+      normal:
+        black:   '0x2a2a2a'
+        red:     '0xC55B4E'
+        green:   '0x86C797'
+        yellow:  '0xE1AE69'
+        blue:    '0x6CA6CE'
+        magenta: '0xb16286'
+        cyan:    '0x689d6a'
+        white:   '0xcccccc'
+
+      bright:
+        black:   '0x2a2a2a'
+        red:     '0xC55B4E'
+        green:   '0x86C797'
+        yellow:  '0xE1AE69'
+        blue:    '0x6CA6CE'
+        magenta: '0xb16286'
+        cyan:    '0x689d6a'
+        white:   '0xcccccc'
+
+colors: *base16
 
 visual_bell:
   animation: EaseOutExpo
@@ -89,7 +124,7 @@ dynamic_title: true
 
 cursor:
   style: Block
-  unfocused_hollow: false
+  unfocused_hollow: true
 
 live_config_reload: true
 working_directory: None
