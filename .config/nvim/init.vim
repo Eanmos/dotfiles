@@ -13,7 +13,6 @@ hi clear CursorLine
 
 " Make sign column always visible.
 set signcolumn=yes
-
 " Set UTF-8 as default encoding.
 set encoding=utf-8
 
@@ -34,7 +33,7 @@ set matchpairs+=<:>
 
 " Print unvisible tab and space characters.
 set list
-set listchars=tab:•\ ,trail:•,extends:»,precedes:«
+set listchars=tab:┊\ ,trail:┊,extends:»,precedes:«
 
 " Highlight search results.
 set hlsearch
@@ -46,7 +45,7 @@ set wildmenu
 syntax on
 
 " Set a colorscheme.
-colorscheme centurion
+colorscheme base16-default-dark
 
 " Use GUI colors in the terminal.
 if has('termguicolors')
@@ -67,6 +66,9 @@ set hidden
 set swapfile
 set dir=~/.tmp
 
+" Autoload file changes as soon as it changes on disk.
+set autoread
+
 "==============================================================================
 "
 " APPEARANCE
@@ -77,20 +79,28 @@ set dir=~/.tmp
 set laststatus=2
 
 " Set status line format.
-set statusline+=%1*\ %<%F\ %m
-set statusline+=%2*\ %=\ %l\:%c
-set statusline+=%3*\ 
-
-" Set status line colors.
-hi StatusLine guifg=#666666 guibg=#444444
-hi StatusLineNC guifg=#666666 guibg=#444444
-hi User1 guifg=#cccccc guibg=#444444
-hi User2 guifg=#cccccc guibg=#444444
-hi User3 guifg=#cccccc guibg=#444444
-hi User4 guifg=#444444 guibg=#444444
+set statusline+=%*\ %F\ %m%=%l:%c\ %*
 
 " Set vertical split style.
-:set fillchars+=vert:\ 
+set fillchars+=vert:\ 
 
-" Set vertical spilt color.
-hi VertSplit guifg=#444444 guibg=NONE
+" Color scheme.
+hi LineNr guibg=#181818
+hi SignColumn guibg=#181818
+
+hi StatusLine guifg=#b8b8b8 guibg=#282828
+hi StatusLineNC guifg=#585858 guibg=#282828
+
+hi VertSplit guifg=#282828 guibg=#282828
+
+hi CursorLine guibg=NONE
+hi CursorLineNR guibg=NONE
+
+hi EndOfBuffer guifg=#181818
+
+hi GitGutterAdd guibg=NONE
+hi GitGutterDelete guibg=NONE
+hi GitGutterChange guibg=NONE
+hi GitGutterChangeDelete guibg=NONE
+
+set updatetime=100
