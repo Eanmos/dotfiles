@@ -19,8 +19,8 @@ set signcolumn=yes
 set encoding=utf-8
 
 " Tabulation settings.
-set tabstop=4
-set shiftwidth=4
+set tabstop=8
+set shiftwidth=8
 set noexpandtab
 
 " Set minimal number of screen lines to keep above and
