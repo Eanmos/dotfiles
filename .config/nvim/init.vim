@@ -1,3 +1,4 @@
+" Pathogen plugin manager.
 execute pathogen#infect()
 
 " Set number lines.
@@ -13,6 +14,7 @@ hi clear CursorLine
 
 " Make sign column always visible.
 set signcolumn=yes
+
 " Set UTF-8 as default encoding.
 set encoding=utf-8
 
@@ -32,8 +34,12 @@ set ttyfast
 set matchpairs+=<:>
 
 " Print unvisible tab and space characters.
-set list
-set listchars=tab:┊\ ,trail:┊,extends:»,precedes:«
+  set list
+  set listchars=tab:┊\ ,
+  set listchars+=trail:·,
+  set listchars+=extends:»,
+  set listchars+=precedes:«,
+" set listchars+=eol:¶
 
 " Highlight search results.
 set hlsearch
@@ -69,6 +75,16 @@ set dir=~/.tmp
 " Autoload file changes as soon as it changes on disk.
 set autoread
 
+" Disable word-wrapping.
+set nowrap
+
+" Update time (used by GitGutter and autoload, for example).
+set updatetime=100
+
+" Syntax highlighting for Verilog, GAS and objdump.
+autocmd BufNewFile,BufRead *.v,*.vs set syntax=verilog
+autocmd BufNewFile,BufRead *.s,*.S,*.objdump set syntax=gas
+
 "==============================================================================
 "
 " APPEARANCE
@@ -84,23 +100,17 @@ set statusline+=%*\ %F\ %m%=%l:%c\ %*
 " Set vertical split style.
 set fillchars+=vert:\ 
 
-" Color scheme.
+" Theme tweaks.
 hi LineNr guibg=#181818
 hi SignColumn guibg=#181818
-
 hi StatusLine guifg=#b8b8b8 guibg=#282828
 hi StatusLineNC guifg=#585858 guibg=#282828
-
 hi VertSplit guifg=#282828 guibg=#282828
-
 hi CursorLine guibg=NONE
 hi CursorLineNR guibg=NONE
-
 hi EndOfBuffer guifg=#181818
-
 hi GitGutterAdd guibg=NONE
 hi GitGutterDelete guibg=NONE
 hi GitGutterChange guibg=NONE
 hi GitGutterChangeDelete guibg=NONE
-
-set updatetime=100
+hi NonText guifg=#343434 guibg=NONE gui=NONE
