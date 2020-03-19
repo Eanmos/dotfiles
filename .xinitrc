@@ -1,1 +1,1 @@
-openbox-session
+i3
