@@ -21,6 +21,3 @@ export EDITOR='$VISUAL'
 YELLOW="\[$(tput setaf 3)\]"
 RESET="\[$(tput sgr0)\]"
 export PS1="${YELLOW}\$${RESET} "
-
-# Set the terminal window title.
-trap 'echo -ne "\033]0;$(pwd)\007"' DEBUG
