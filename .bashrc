@@ -13,8 +13,8 @@ alias mkdir='mkdir -p'
 alias dotfiles='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 alias fzf='fzf -m --no-mouse'
 
-# Make Vim the default editor.
-export VISUAL=vim
+# Make NeoVim the default editor.
+export VISUAL=nvim
 export EDITOR='$VISUAL'
 
 # Set shell prompt.
