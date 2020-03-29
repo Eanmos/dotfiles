@@ -4,9 +4,9 @@ execute pathogen#infect()
 " Set number lines.
 set number
 
-" Disable showing mode and enable showing comands.
+" Disable showing mode and commands.
 set noshowmode
-set showcmd
+set noshowcmd
 
 " Make cursor line visible, but highlight only current line number.
 set cursorline
@@ -101,7 +101,8 @@ set statusline+=%*\ %F\ %m%=%l:%c\ %*
 set fillchars+=vert:\ 
 
 " Theme tweaks.
-hi LineNr guibg=#181818
+hi Normal guibg=NONE
+hi LineNr guibg=NONE
 hi SignColumn guibg=#181818
 hi StatusLine guifg=#b8b8b8 guibg=#282828
 hi StatusLineNC guifg=#585858 guibg=#282828
