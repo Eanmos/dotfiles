@@ -18,10 +18,10 @@ tabspaces: 4
 
 font:
   normal:
-    family: Consolas
+    family: Iosevka SS03
     style: Regular
 
-  size: 8
+  size: 8.5
 
   offset:
     x: 0
