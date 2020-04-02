@@ -1,0 +1,15 @@
+[alias]
+	l = log --pretty=oneline -n 20 --graph --abbrev-commit
+	s = status -s
+	whoami = config user.email
+
+[core]
+	whitespace = space-before-tab,-indent-with-non-tab,trailing-space
+
+[user]
+	email = eanmos@ya.ru
+	name = Nefedov Danil
+	signingkey = 992EE5278F1AC84669DAE4DB593D82DA9A4239ED
+
+[commit]
+	gpgsign = true
