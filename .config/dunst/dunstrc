@@ -2,7 +2,7 @@
 	geometry = "x5-0+0"
 	padding = 1
 	horizontal_padding = 10
-	font = JetBrains Mono 8
+	font = Iosevka SS03 9.5
 
 [urgency_low]
     background = "#202020"
