@@ -2,6 +2,9 @@
 # ~/.bashrc
 #
 
+# If not running interactively, don't do anything.
+[[ $- != *i* ]] && return
+
 # Enable fuzzy completion for BASH.
 source /usr/share/fzf/completion.bash
 
@@ -18,6 +21,7 @@ export VISUAL=nvim
 export EDITOR='$VISUAL'
 
 # Set shell prompt.
-YELLOW="\[$(tput setaf 3)\]"
-RESET="\[$(tput sgr0)\]"
-export PS1="${YELLOW}\$${RESET} "
+readonly YELLOW="\[$(tput setaf 3)\]"
+readonly BOLD="\[$(tput bold)\]"
+readonly RESET="\[$(tput sgr0)\]"
+export PS1="${YELLOW}${BOLD}λ${RESET} "
