@@ -1,0 +1,17 @@
+# Fullscreen keybindning.
+unmap f
+map f toggle_fullscreen
+map [fullscreen] f toggle_fullscreen
+
+# Recolor keybinding.
+unmap i
+map i recolor
+
+# Disable all the GUI.
+set guioptions none
+
+# Recolor the document to dark theme that
+# matches the terminal color scheme.
+set recolor
+set recolor-lightcolor "#181818"
+set recolor-darkcolor  "#CCCCCC"
