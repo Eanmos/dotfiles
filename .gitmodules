@@ -5,3 +5,15 @@
 [submodule ".config/nvim/bundle/supertab"]
 	path = .config/nvim/bundle/supertab
 	url = https://github.com/ervandew/supertab
+
+[submodule ".config/nvim/bundle/delimitMate"]
+	path = .config/nvim/bundle/delimitMate
+	url = https://github.com/Raimondi/delimitMate
+
+[submodule ".config/nvim/bundle/vim-commentary"]
+	path = .config/nvim/bundle/vim-commentary
+	url = https://github.com/tpope/vim-commentary
+
+[submodule ".config/nvim/bundle/vim-floaterm"]
+	path = .config/nvim/bundle/vim-floaterm
+	url = https://github.com/voldikss/vim-floaterm
