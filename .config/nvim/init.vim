@@ -39,7 +39,6 @@ set matchpairs+=<:>
   set listchars+=trail:·,
   set listchars+=extends:»,
   set listchars+=precedes:«,
-" set listchars+=eol:¶
 
 " Highlight search results.
 set hlsearch
@@ -85,6 +84,15 @@ set updatetime=100
 autocmd BufNewFile,BufRead *.v,*.vs set syntax=verilog
 autocmd BufNewFile,BufRead *.s,*.S,*.objdump set syntax=gas
 
+" Fix Vim bug with compound literals highlighting in C.
+let c_no_curly_error=1
+
+" Disable VIM intro.
+set shm+=I
+
+" Make FZF show hidden files by default.
+let $FZF_DEFAULT_COMMAND='rg --files --hidden -g !.git/'
+
 "==============================================================================
 "
 " APPEARANCE
@@ -104,9 +112,9 @@ set fillchars+=vert:\
 hi Normal guibg=NONE
 hi LineNr guibg=NONE
 hi SignColumn guibg=#181818
-hi StatusLine guifg=#b8b8b8 guibg=#282828
-hi StatusLineNC guifg=#585858 guibg=#282828
-hi VertSplit guifg=#282828 guibg=#282828
+hi StatusLine guifg=#b8b8b8 guibg=#202020
+hi StatusLineNC guifg=#585858 guibg=#202020
+hi VertSplit guifg=#202020 guibg=#202020
 hi CursorLine guibg=NONE
 hi CursorLineNR guibg=NONE
 hi EndOfBuffer guifg=#181818
@@ -115,3 +123,22 @@ hi GitGutterDelete guibg=NONE
 hi GitGutterChange guibg=NONE
 hi GitGutterChangeDelete guibg=NONE
 hi NonText guifg=#343434 guibg=NONE gui=NONE
+hi TabLineFill guifg=NONE guibg=#202020
+hi TabLine guibg=#202020
+hi TabLineSel guibg=#202020
+
+"==============================================================================
+"
+" PLUGIN floaterm
+"
+"==============================================================================
+
+hi FloatermBorder guibg=NONE guifg=#585858
+
+let g:floaterm_height=0.8
+let g:floaterm_width=0.8
+let g:floaterm_title=''
+let g:floaterm_borderchars=['─', '│', '─', '│', '╭', '╮', '╯', '╰']
+
+nnoremap <silent> <F12> :FloatermToggle <CR>
+tnoremap <silent> <F12> <C-\><C-n> :FloatermToggle <CR>
