@@ -16,6 +16,10 @@ alias mkdir='mkdir -p'
 alias dotfiles='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 alias fzf='fzf -m --no-mouse'
 
+# Make FZF looks in hidden directoris.
+export FZF_DEFAULT_COMMAND="rg --files --hidden -g !.git/"
+export FZF_DEFAULT_OPTS="--color=bg+:#181818,hl+:#181818"
+
 # Make NeoVim the default editor.
 export VISUAL=nvim
 export EDITOR='$VISUAL'
