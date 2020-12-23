@@ -17,3 +17,6 @@
 [submodule ".config/nvim/bundle/vim-floaterm"]
 	path = .config/nvim/bundle/vim-floaterm
 	url = https://github.com/voldikss/vim-floaterm
+[submodule ".config/nvim/bundle/fzf.vim"]
+	path = .config/nvim/bundle/fzf.vim
+	url = https://github.com/junegunn/fzf.vim
