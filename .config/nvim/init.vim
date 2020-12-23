@@ -1,6 +1,10 @@
 " Pathogen plugin manager.
 execute pathogen#infect()
 
+" Disable F1 help menu.
+nmap <F1> :echo<CR>
+imap <F1> <C-o>:echo<CR>
+
 " Set number lines.
 set number
 
@@ -90,8 +94,10 @@ let c_no_curly_error=1
 " Disable VIM intro.
 set shm+=I
 
-" Make FZF show hidden files by default.
-let $FZF_DEFAULT_COMMAND='rg --files --hidden -g !.git/'
+" No highlight search when press C-L.
+if maparg('<C-L>', 'n') ==# ''
+	nnoremap <silent> <C-L> :nohlsearch<C-R>=has('diff')?'<Bar>diffupdate':''<CR><CR><C-L>
+endif
 
 "==============================================================================
 "
@@ -133,12 +139,26 @@ hi TabLineSel guibg=#202020
 "
 "==============================================================================
 
+" Floating term appearance.
 hi FloatermBorder guibg=NONE guifg=#585858
-
 let g:floaterm_height=0.8
 let g:floaterm_width=0.8
 let g:floaterm_title=''
 let g:floaterm_borderchars=['─', '│', '─', '│', '╭', '╮', '╯', '╰']
 
+" Mappings for opening and closing floating term.
 nnoremap <silent> <F12> :FloatermToggle <CR>
 tnoremap <silent> <F12> <C-\><C-n> :FloatermToggle <CR>
+
+"==============================================================================
+"
+" PLUGIN fzf
+"
+"==============================================================================
+
+" Fuzzy search for files in working directory.
+nnoremap <silent> <F11> :FZF <CR>
+
+" Fuzzy search inside files in working directory.
+" Requires the_silver_searcher to be installed.
+nnoremap <silent> <F10> :Ag <CR>
