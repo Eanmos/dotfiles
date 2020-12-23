@@ -14,10 +14,9 @@ alias ls='ls --color=auto'
 alias pacman='pacman --color=auto'
 alias mkdir='mkdir -p'
 alias dotfiles='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
-alias fzf='fzf -m --no-mouse'
+alias objdump='objdump --no-show-raw-insn'
 
-# Make FZF looks in hidden directoris.
-export FZF_DEFAULT_COMMAND="rg --files --hidden -g !.git/"
+# Change FZF appearence so it matches the terminal theme.
 export FZF_DEFAULT_OPTS="--color=bg+:#181818,hl+:#181818"
 
 # Make NeoVim the default editor.
