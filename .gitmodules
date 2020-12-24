@@ -20,3 +20,6 @@
 [submodule ".config/nvim/bundle/fzf.vim"]
 	path = .config/nvim/bundle/fzf.vim
 	url = https://github.com/junegunn/fzf.vim
+[submodule ".config/nvim/bundle/vim-easymotion"]
+	path = .config/nvim/bundle/vim-easymotion
+	url = https://github.com/easymotion/vim-easymotion.git
