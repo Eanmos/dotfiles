@@ -162,3 +162,21 @@ nnoremap <silent> <F11> :FZF <CR>
 " Fuzzy search inside files in working directory.
 " Requires the_silver_searcher to be installed.
 nnoremap <silent> <F10> :Ag <CR>
+
+"==============================================================================
+"
+" PLUGIN easymotion
+"
+"==============================================================================
+
+" Disable default mappings.
+let g:EasyMotion_do_mapping = 0
+
+" Turn on case-insensitive feature.
+let g:EasyMotion_smartcase = 1
+
+" Define the only one keybinding we need.
+nmap s <Plug>(easymotion-overwin-f)
+
+" Change the default color for motion target to bright yellow.
+hi EasyMotionTarget guifg=#f7ca88 gui=bold
